@@ -1,0 +1,137 @@
+    .my-skills-container {
+        background-color: rgba(80, 78, 78, 0.39);
+        margin-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+    
+    h1 {
+        color: white;
+        display: flex;
+        justify-content: center;
+        padding-top: 35px;
+    }
+    
+    .language-container1 {
+        background-color: #8d8d8d;
+        width: 250px;
+        height: 150px;
+        margin-left: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 16px #000000;
+        ;
+        img {
+            height: 80px;
+            margin-top: -35px;
+        }
+        h3 {
+            display: flex;
+            justify-content: center;
+            margin-bottom: -15px;
+        }
+        .logo {
+            height: 65px;
+            margin-top: -30px;
+            background-color: white;
+            border-radius: 50%;
+        }
+        .scrum-logo {
+            height: 65px;
+            margin-top: -30px;
+            border-radius: 50%;
+        }
+        .api-logo {
+            width: 65px;
+        }
+    }
+    
+    .language-container-top {
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+    }
+    
+    .main-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    //--------------------------------------Media Query 991px------------------------------
+    @media (max-width: 991px) {
+        .my-skills-container {
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        .language-container1 {
+            width: 200px;
+            height: 100px;
+            img {
+                height: 50px;
+                margin-top: -25px;
+            }
+            .logo {
+                height: 45px;
+                margin-top: -25px;
+            }
+            .scrum-logo {
+                height: 45px;
+                margin-top: -25px;
+                border-radius: 50%;
+            }
+            h3 {
+                font-size: 18px;
+            }
+        }
+    }
+    
+    //--------------------------------------Media Query 600px------------------------------
+    @media (max-width: 600px) {
+        .my-skills-container {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .language-container1 {
+            width: 150px;
+            height: 100px;
+            img {
+                height: 40px;
+                margin-top: -20px;
+            }
+            .logo {
+                height: 34px;
+                margin-top: -18px;
+            }
+            h3 {
+                font-size: 15px;
+            }
+        }
+    }
+    
+    //--------------------------------------Media Query 38px------------------------------
+    @media (max-width: 380px) {
+        .my-skills-container {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .language-container1 {
+            width: 100px;
+            height: 80px;
+            img {
+                height: 40px;
+                margin-top: -20px;
+            }
+            .logo {
+                height: 34px;
+                margin-top: -18px;
+            }
+            h3 {
+                font-size: 12px;
+            }
+            .scrum-logo {
+                height: 35px;
+                margin-top: -25px;
+                border-radius: 50%;
+            }
+        }
+    }

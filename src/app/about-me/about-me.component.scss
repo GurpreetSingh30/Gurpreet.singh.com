@@ -1,0 +1,168 @@
+        .main-container {
+            background-color: rgb(80, 78, 78, 0.39);
+            margin-top: 60px;
+            padding-left: 120px;
+            padding-right: 120px;
+            img {
+                height: 150px;
+                width: 150px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+            .about-me-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 80px;
+                text-align: center;
+                border-bottom: 1px solid #f4f4f2;
+                padding-bottom: 50px;
+                color: white;
+            }
+            .right-container {
+                padding-left: 50px;
+            }
+            .about-text {
+                width: 400px;
+                font-size: 20px;
+            }
+            .left-container {
+                box-shadow: 0 0 16px #ffffff;
+                ;
+                border: 2px solid;
+                border-radius: 50%;
+                background-color: #ff5200;
+                display: flex;
+            }
+            .foo {
+                transition: transform 4s ease-out;
+            }
+            .foo.sn-viewport--out {
+                transform: translateX(-300px);
+            }
+            .foo.sn-viewport--in {
+                transform: translateX(0);
+            }
+            .foo2 {
+                transition: transform 2s ease-out;
+            }
+            .foo2.sn-viewport--out {
+                transform: translateX(-300px);
+            }
+            .foo2.sn-viewport--in {
+                transform: translateX(0);
+            }
+            .foo3 {
+                transition: transform 2s ease-out;
+            }
+            .foo3.sn-viewport--out {
+                transform: translateX(300px);
+            }
+            .foo3.sn-viewport--in {
+                transform: translateX(0);
+            }
+            .foo4 {
+                transition: transform 4s ease-out;
+            }
+            .foo4.sn-viewport--out {
+                transform: translateX(300px);
+            }
+            .foo4.sn-viewport--in {
+                transform: translateX(0);
+            }
+            .opacity {
+                transition: opacity 3s ease-in;
+            }
+            .opacity.sn-viewport--out {
+                opacity: 0;
+            }
+            .opacity.sn-viewport--in {
+                opacity: 1;
+            }
+            .about-sub {
+                color: white;
+                display: flex;
+                justify-content: center;
+            }
+            .sub-slot {
+                text-align: center;
+                margin-left: 35px;
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+            .icon-img {
+                width: 40px;
+                height: 40px;
+            }
+            .icon {
+                background-color: #080a09;
+                height: 80px;
+                width: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 200px;
+                margin-bottom: 20px;
+                box-shadow: 0 0 16px #ffffff;
+                border: 1px solid white;
+            }
+            .text {
+                font-size: 20px;
+            }
+            h2 {
+                height: 60px;
+            }
+        }
+        
+        @media (max-width:991px) {
+            .main-container {
+                padding-left: 80px;
+                padding-right: 80px;
+                .sub-slot {
+                    margin-left: 0px;
+                    margin-top: 0px;
+                }
+            }
+            .right-container {
+                padding-left: 0px;
+            }
+            .about-me-container {
+                flex-direction: column;
+                img {
+                    width: 110px;
+                    height: 110px;
+                }
+                .about-text {
+                    width: unset;
+                }
+            }
+            .about-sub {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width:600px) {
+            .main-container {
+                padding-left: 30px;
+                padding-right: 30px;
+                .right-container {
+                    padding-left: 0px;
+                }
+                h2 {
+                    width: 268px;
+                }
+                .text {
+                    width: 300px;
+                }
+            }
+        }
+        
+        @media (max-width:350px) {
+            .main-container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }

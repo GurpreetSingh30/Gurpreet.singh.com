@@ -1,0 +1,41 @@
+<div id="contact" class="contact-container">
+    <div class="stars-01"></div>
+
+
+
+    <form [formGroup]="form" (submit)="senden()">
+        <div class="titel">
+            <h1>Kontaktiere mich</h1>
+        </div>
+        <p>Melden Sie sich mithilfe des Kontaktformulars oder direkt per E-Mail an Gurpreet.singh@gmx.de</p>
+        <div class="half">
+            <div class="item">
+                <label>NAME</label>
+                <input type="text" [formControlName]="'name'" placeholder=" Geben sie ihren Name ein">
+            </div>
+
+            <div class="item">
+                <label>EMAIL</label>
+                <input type="text" [formControlName]="'email'" placeholder=" Geben sie ihre E-Mail ein">
+            </div>
+        </div>
+        <div class="full">
+            <label>Nachricht</label>
+            <textarea type="text" [formControlName]="'message'" placeholder=" Geben sie ihre Nachricht ein" id="massage" cols="30" rows="10"></textarea>
+        </div>
+        <div class="action">
+
+            <a type="submit" href="#"><span>SENDEN</span> </a>
+            <input type="submit" value="Senden">
+
+        </div>
+    </form>
+
+
+
+
+
+
+
+
+</div>

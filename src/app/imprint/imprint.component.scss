@@ -1,0 +1,39 @@
+.imprint-container {
+    height: 100%;
+    background-color: #8f8f8f;
+    margin-top: 99px;
+    .imprint {
+        padding-left: 220px;
+        padding-right: 220px;
+        padding-top: 50px;
+        font-size: 20px;
+        height: 66vh;
+    }
+}
+
+@media (max-width: 991px) {
+    .imprint-container {
+        .imprint {
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .imprint-container {
+        .imprint {
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .imprint-container {
+        .imprint {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}

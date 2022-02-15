@@ -1,0 +1,67 @@
+<div id="my-work-container" class="container">
+
+    <div class="stars-01"></div>
+    <div class="stars-02"></div>
+    <div class="stars-03"></div>
+    <div class="stars-04"></div>
+
+    <div class="my-work-container">
+
+        <h1>My Work</h1>
+
+
+        <div class=" project-links ">
+
+            <a (click)="showAllProjects()"><span>All</span></a>
+            <a (click)="showAngularProjects()"><span>Angular</span></a>
+            <a (click)="showJavaScriptProjects()"><span>Java Script</span></a>
+
+        </div>
+
+
+        <div data-anijs="if: click, do: rotateIn animated, to: $parent target" class="flip-container ">
+            <div *ngIf=" showAll || showJavaScript" class="flip3D ">
+                <div class="back ">Lieferando
+                    <a href="https://gurpreet-singh.developerakademie.com/Lieferando/index.html" target="_blank"><button>Anzeigen</button></a>
+                </div>
+                <div class="front "><img src="assets/img/lieferando.png "></div>
+
+            </div>
+            <div *ngIf="showAll || showJavaScript" class="flip3D ">
+                <div class="back ">Pokedex
+                    <a href="https://gurpreet-singh.developerakademie.com/Pokedex/index.html" target="_blank"><button>Anzeigen</button></a>
+                </div>
+                <div class="front "><img src="assets/img/Kochwelt.png "></div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <div class="flip-container ">
+            <div *ngIf="showAll || showAngular " class="flip3D ">
+                <div class="back ">Portfolio
+
+                    <a href=""><button>Anzeigen</button></a>
+                </div>
+                <div class="front "><img src="assets/img/portfolio.png "></div>
+
+            </div>
+            <div *ngIf="showAll || showJavaScript" class="flip3D ">
+                <div class="back ">Tic Tac Toe
+                    <a href="https://gurpreet-singh.developerakademie.com/TicTacToe/index.html" target="_blank"> <button>Anzeigen</button></a>
+                </div>
+                <div class="front "><img src="assets/img/tictactoe.png "></div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<!----assets/img/myImg.jpeg-->

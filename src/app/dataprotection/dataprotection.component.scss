@@ -1,0 +1,23 @@
+.protection-frame {
+    color: white;
+    padding-left: 220px;
+    padding-right: 220px;
+    background-color: gray;
+    height: 100%;
+    margin-top: 102px;
+    padding-bottom: 1px;
+    .protection-container {
+        padding-top: 100px;
+    }
+}
+
+@media (max-width:991px) {
+    .protection-frame {
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+        .protection-container {
+            padding-top: 50px;
+        }
+    }
+}
