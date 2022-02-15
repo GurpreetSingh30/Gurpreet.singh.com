@@ -69,7 +69,6 @@ div {
         border-radius: 7px;
         backface-visibility: hidden;
         transition: transform .5s linear 0s;
-        filter: blur(1.2px);
         border-radius: 20px;
     }
     >.back {
@@ -195,7 +194,7 @@ div {
     .project-links {
         a {
             height: 30px;
-            width: 80px;
+            width: 200px;
             line-height: 28px;
             font-size: 10px;
         }

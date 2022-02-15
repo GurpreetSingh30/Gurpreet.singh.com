@@ -36,6 +36,7 @@ img {
             position: relative;
             border-radius: 10px;
             font-size: 20px;
+            top: 80px;
             cursor: pointer;
             &::before {
                 content: '';
@@ -107,6 +108,7 @@ img {
         .button-container {
             button {
                 width: 295px;
+                top: 120px;
             }
         }
     }
@@ -145,6 +147,7 @@ img {
         img {
             height: 150px;
             width: 150px;
+            top: 80px;
         }
     }
     .headline {
@@ -158,6 +161,7 @@ img {
             bottom: 295px;
             button {
                 width: 220px;
+                top: 50px;
             }
         }
     }
