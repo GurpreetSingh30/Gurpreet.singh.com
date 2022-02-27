@@ -3,10 +3,10 @@
     <img src="assets/img/logo_large.png">
     <div class="menu">
         <div class="links">
-            <a routerLink="/">Home</a>
-            <a href="#about-container">About</a>
-            <a href="#my-skills">My Skills</a>
-            <a href="#my-work-container">My Projects</a>
+            <a class="links-hover" routerLink="/">Home</a>
+            <a class="links-hover" href="#about-container">About</a>
+            <a class="links-hover" href="#my-skills">My Skills</a>
+            <a class="links-hover" href="#my-work-container">My Projects</a>
         </div>
     </div>
     <div *ngIf="menuIsOpen" class="burger">
@@ -18,10 +18,10 @@
         </div>
     </div>
     <img class="burger-menu" src="assets/img/LogoMakr.png" (click)="openCloseMenu()">
-    <div class="stars-01"></div>
+    <!-- <div class="stars-01"></div>
     <div class="stars-02"></div>
     <div class="stars-03"></div>
-    <div class="stars-04"></div>
+    <div class="stars-04"></div> -->
 </header>
 
 <!--------------------introduction--------------->

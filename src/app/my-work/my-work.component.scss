@@ -24,7 +24,7 @@ h1 {
         text-align: center;
         position: relative;
         transition: all .35s;
-        margin-left: 30px;
+        margin-left: 15px;
     }
     a span {
         position: relative;
@@ -164,6 +164,7 @@ div {
             width: 100px;
             line-height: 38px;
             font-size: 12px;
+            min-width: 88px;
         }
     }
     .flip-container {
@@ -221,7 +222,32 @@ div {
 
 @media (max-width: 350px) {
     .my-work-container {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .project-links {
+        a {
+            height: 25px;
+            line-height: 25px;
+            font-size: 10px;
+        }
+    }
+    .flip-container {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        .flip3D {
+            width: 200px;
+            height: 200px;
+            margin-top: 15px;
+        }
+        .back {
+            height: 200px;
+            width: 200px;
+        }
+        img {
+            height: 200px;
+            width: 200px;
+        }
     }
 }

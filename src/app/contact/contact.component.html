@@ -3,7 +3,7 @@
 
 
 
-    <form [formGroup]="form" (submit)="senden()">
+    <!-- <form [formGroup]="form" (submit)="senden()">
         <div class="titel">
             <h1>Kontaktiere mich</h1>
         </div>
@@ -25,13 +25,29 @@
         </div>
         <div class="action">
 
-            <!-- <a type="submit" href="#"><span>SENDEN</span> </a> -->
+             <a type="submit" href="#"><span>SENDEN</span> </a> 
             <input type="submit" value="Senden">
 
         </div>
+    </form> -->
+
+
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <div>
+            <input type="text" placeholder="Geben sie ihren Name ein*" id="name" required [(ngModel)]="contactData.name" name="name" #name="ngModel" />
+        </div>
+        <div>
+            <input type="email" placeholder="Geben sie ihre E-Mail ein" [(ngModel)]="contactData.email" name="email" #email="ngModel" />
+        </div>
+        <div>
+            <textarea type="text" rows="10" placeholder="Geben sie ihre Nachricht ein" required [(ngModel)]="contactData.message" name="message" #message="ngModel"></textarea>
+        </div>
+        <div>
+            <button type="submit" [disabled]="!contactForm.form.valid">
+          Submit
+        </button>
+        </div>
     </form>
-
-
 
 
 

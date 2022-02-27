@@ -1,50 +1,29 @@
 <?php
 
-########### CONFIG ###############
-
-$recipient = 'gurpreet.singh@gmx.de';
-
-
-########### CONFIG END ###########
-
-
-
-########### Intruction ###########   
-#
-#   This script has been created to send an email to the $recipient
-#   
-#  1) Upload this file to your FTP Server
-#  2) Send a POST rewquest to this file, including
-#     [name] The name of the sender (Absender)
-#     [message] Message that should be send to you
-#
-##################################
-
-
-
-###############################
-#
-#        DON'T CHANGE ANYTHING FROM HERE!
-#
-#        Ab hier nichts mehr ändern!
-#
-###############################
-
-switch ($_SERVER['REQUEST_METHOD']) {
-    case ("OPTIONS"): //Allow preflighting to take place.
+switch($_SERVER['REQUEST_METHOD']){
+    case("OPTIONS"): //Allow preflighting to take place.
         header("Access-Control-Allow-Origin: *");
         header("Access-Control-Allow-Methods: POST");
         header("Access-Control-Allow-Headers: content-type");
         exit;
-    case ("POST"): //Send the email;
+    case("POST"): //Send the email;
         header("Access-Control-Allow-Origin: *");
+        // Payload is not send to $_POST Variable,
+        // is send to php:input as a text
+        $json = file_get_contents('php://input');
+        //parse the Payload from text format to Object
+        $params = json_decode($json);
 
-        $subject = "Contact From " . $_POST['name'].' ('.$_POST['email'].')';
-        $headers = "From:  noreply@developerakademie.com";
+        $email = $params->email;
+        $name = $params->name;
+        $message = $params->message;
 
-        mail($recipient, $subject, $_POST['message'], $headers);
-    
+        $recipient = 'gurpreet.singh@gmx.de'; //your email address
+        $subject = "Contact From $name <$email>";
+        $headers = "From:  noreply@mywebsite.com";
 
+        mail($recipient, $subject, $message, $headers);
+        echo $subject;
         break;
     default: //Reject any non POST or OPTIONS requests.
         header("Allow: POST", true, 405);

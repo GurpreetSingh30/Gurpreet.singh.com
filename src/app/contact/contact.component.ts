@@ -1,5 +1,7 @@
+
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+
 
 
 @Component({
@@ -10,20 +12,43 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class ContactComponent implements OnInit {
 
  
-  sendMailUrl;
+  contactData = {
+    name: '', 
+    email: '', 
+    message: '', 
+  };
+
+  post = {
+  
+    endPoint: 'https://gurpreet-singh.developerakademie.com/send_mail.php',
+  
+    body: (payload: any) => JSON.stringify(payload),
+   
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+
+
+
+  // sendMailUrl;
   
 
-  form = this.fb.group({
-    name: this.fb.control('', [Validators.required]),
-    email: this.fb.control('', [Validators.required, Validators.email]),
-    message: this.fb.control('')
-  })
+  // form = this.fb.group({
+  //   name: this.fb.control('', [Validators.required]),
+  //   email: this.fb.control('', [Validators.required, Validators.email]),
+  //   message: this.fb.control('')
+  // })
 
-  constructor(private fb:FormBuilder) { 
+  constructor(private http: HttpClient ) { 
 
  
     
-    this.sendMailUrl = 'https://gurpreet-singh.developerakadamie.com/send_mail.php';
+    // this.sendMailUrl = 'https://gurpreet-singh.developerakademie.com/send_mail.php';
     
    
    }
@@ -33,17 +58,28 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  senden() {
-    console.log(this.form.value);
-    let formData = new FormData()
-      formData.append('name', this.form.get('name')?.value);
-      formData.append('email', this.form.get('email')?.value);
-      formData.append('message', this.form.get('message')?.value);
+  onSubmit(ngForm: any) {
+    if (ngForm.submitted && ngForm.form.valid) {
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => console.log(response),
+          error: (error) => console.error(error),
+          complete: () => console.info('send post complete'),
+        });
+    }
+  }
+//  senden() {
+//     console.log(this.form.value);
+//     let formData = new FormData()
+//       formData.append('name', this.form.get('name')?.value);
+//       formData.append('email', this.form.get('email')?.value);
+//       formData.append('message', this.form.get('message')?.value);
 
-    fetch(this.sendMailUrl, {
-      method: "POST",
-      body: formData
-    })
+//     fetch(this.sendMailUrl, {
+//       method: "POST",
+//       body: formData
+//     })
 
-}
+// }
 }
