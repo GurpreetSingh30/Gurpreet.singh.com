@@ -18,8 +18,7 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { HomeComponent } from './home/home.component';
 import { DataprotectionComponent } from './dataprotection/dataprotection.component';
 
-import {HttpClient} from '@angular/common/http';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -34,13 +33,7 @@ import {HttpClient} from '@angular/common/http';
     FooterComponent,
     ImprintComponent,
     HomeComponent,
-  
     DataprotectionComponent,
-    HttpClient,
-  
-    
-    
-    
   ],
   imports: [
     BrowserModule,
@@ -49,7 +42,7 @@ import {HttpClient} from '@angular/common/http';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-   
+    HttpClientModule
   
   ],
   providers: [],

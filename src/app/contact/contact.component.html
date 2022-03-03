@@ -2,7 +2,6 @@
     <div class="stars-01"></div>
 
 
-
     <!-- <form [formGroup]="form" (submit)="senden()">
         <div class="titel">
             <h1>Kontaktiere mich</h1>
@@ -33,13 +32,18 @@
 
 
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <div class="titel">
+            <h1>Kontaktiere mich</h1>
+        </div>
+        <p>Melden Sie sich mithilfe des Kontaktformulars oder direkt per E-Mail an Gurpreet.singh@gmx.de</p>
+
         <div>
             <input type="text" placeholder="Geben sie ihren Name ein*" id="name" required [(ngModel)]="contactData.name" name="name" #name="ngModel" />
         </div>
         <div>
             <input type="email" placeholder="Geben sie ihre E-Mail ein" [(ngModel)]="contactData.email" name="email" #email="ngModel" />
         </div>
-        <div>
+        <div class="full">
             <textarea type="text" rows="10" placeholder="Geben sie ihre Nachricht ein" required [(ngModel)]="contactData.message" name="message" #message="ngModel"></textarea>
         </div>
         <div>

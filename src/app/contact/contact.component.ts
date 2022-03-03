@@ -18,6 +18,9 @@ export class ContactComponent implements OnInit {
     message: '', 
   };
 
+  fd:FormData = new FormData();
+
+
   post = {
   
     endPoint: 'https://gurpreet-singh.developerakademie.com/send_mail.php',
@@ -59,16 +62,33 @@ export class ContactComponent implements OnInit {
   }
   
   onSubmit(ngForm: any) {
+    this.fd.append('name', 'name');
+    this.fd.append('email', 'email');
+    this.fd.append('message', 'message');
+   
     if (ngForm.submitted && ngForm.form.valid) {
       this.http
-        .post(this.post.endPoint, this.post.body(this.contactData))
+        .post(this.post.endPoint, this.post.body(this.fd))
         .subscribe({
           next: (response) => console.log(response),
           error: (error) => console.error(error),
           complete: () => console.info('send post complete'),
         });
+
+        console.log(this.contactData);
     }
+
+
+
+  //    fetch(this.post.endPoint, {
+  //     method: 'POST',
+  //   body: this.fd
+  //   });
   }
+
+
+
+
 //  senden() {
 //     console.log(this.form.value);
 //     let formData = new FormData()
@@ -83,3 +103,7 @@ export class ContactComponent implements OnInit {
 
 // }
 }
+ // fetch('URL', {
+    //   method: 'POST',
+    // body: this.fd
+    // });
