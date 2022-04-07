@@ -2,8 +2,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
-
-
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -38,25 +36,9 @@ export class ContactComponent implements OnInit {
 
 
 
-  // sendMailUrl;
-  
-
-  // form = this.fb.group({
-  //   name: this.fb.control('', [Validators.required]),
-  //   email: this.fb.control('', [Validators.required, Validators.email]),
-  //   message: this.fb.control('')
-  // })
-
   constructor(private http: HttpClient ) { 
 
- 
-    
-    // this.sendMailUrl = 'https://gurpreet-singh.developerakademie.com/send_mail.php';
-    
-   
-   }
-
-  
+ }
 
   ngOnInit(): void {
   }
@@ -73,19 +55,20 @@ export class ContactComponent implements OnInit {
           next: (response) => console.log(response),
           error: (error) => console.error(error),
           complete: () => console.info('send post complete'),
+          
         });
-
+       
         console.log(this.contactData);
+        ngForm.reset();
     }
 
-
+   
 
   //    fetch(this.post.endPoint, {
   //     method: 'POST',
   //   body: this.fd
   //   });
   }
-
 
 
 

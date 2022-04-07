@@ -14,7 +14,7 @@
     }
     
     .language-container1 {
-        background-color: #8d8d8d;
+        background-color: white;
         width: 250px;
         height: 150px;
         margin-left: 40px;
@@ -31,18 +31,20 @@
             margin-bottom: -15px;
         }
         .logo {
-            height: 65px;
-            margin-top: -30px;
-            background-color: white;
+            height: 45px;
+            margin-top: 0px;
             border-radius: 50%;
         }
         .scrum-logo {
-            height: 65px;
-            margin-top: -30px;
+            height: 52px;
+            margin-top: 0px;
             border-radius: 50%;
         }
         .api-logo {
             width: 65px;
+        }
+        .text-container {
+            margin-top: -22px;
         }
     }
     
@@ -55,6 +57,25 @@
     .main-container {
         display: flex;
         justify-content: center;
+        .logo-one {
+            // height: 80px;
+            background-color: white;
+            // width: 80px;
+            margin-top: -40px;
+            margin-bottom: 22px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            border-radius: 160px;
+            box-shadow: 0 2px 2px #00000024, 0 3px 1px -2px #0003, 0 1px 5px #0000001f;
+            // border: 2px solid white;
+            .two {
+                margin: 0;
+                height: 65px;
+                width: 65px;
+                background-color: white
+            }
+        }
     }
     
     //--------------------------------------Media Query 991px------------------------------
@@ -68,20 +89,33 @@
             height: 100px;
             img {
                 height: 50px;
-                margin-top: -25px;
+                // margin-top: -25px;
             }
             .logo {
                 height: 45px;
-                margin-top: -25px;
+                // margin-top: -25px;
             }
             .scrum-logo {
                 height: 45px;
-                margin-top: -25px;
+                margin-top: 0px;
                 border-radius: 50%;
             }
             h3 {
                 font-size: 18px;
             }
+        }
+        .main-container {
+            .logo-one {
+                height: 65px;
+                width: 65px;
+                // .two {
+                //     height: 50px !important;
+                //     width: 50px !important;
+                // }
+            }
+        }
+        .text-container {
+            margin-top: -28px;
         }
     }
     
@@ -97,14 +131,24 @@
             margin-left: 7px;
             img {
                 height: 40px;
-                margin-top: -20px;
+                // margin-top: -20px;
             }
             .logo {
                 height: 34px;
-                margin-top: -18px;
+                // margin-top: -18px;
             }
             h3 {
                 font-size: 15px;
+            }
+        }
+        .main-container {
+            .logo-one {
+                height: 55px !important;
+                width: 55px !important;
+                // .two {
+                //     height: 40px !important;
+                //     width: 40px !important;
+                // }
             }
         }
     }
@@ -120,18 +164,18 @@
             height: 80px;
             img {
                 height: 40px;
-                margin-top: -20px;
+                // margin-top: -20px;
             }
             .logo {
                 height: 34px;
-                margin-top: -18px;
+                // margin-top: -18px;
             }
             h3 {
                 font-size: 12px;
             }
             .scrum-logo {
                 height: 35px;
-                margin-top: -25px;
+                margin-top: 0px;
                 border-radius: 50%;
             }
         }

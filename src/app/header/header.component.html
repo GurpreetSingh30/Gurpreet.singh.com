@@ -1,20 +1,22 @@
 <header>
 
-    <img src="assets/img/logo_large.png">
+    <img routerLink="/" src="assets/img/logo_large.png">
     <div class="menu">
         <div class="links">
-            <a class="links-hover" routerLink="/">Home</a>
-            <a class="links-hover" href="#about-container">About</a>
-            <a class="links-hover" href="#my-skills">My Skills</a>
-            <a class="links-hover" href="#my-work-container">My Projects</a>
+            <a class="links-hover" [class.link-active]="viewSection.selected==0" (click)="viewSection.selected=0" href="#home">Home</a>
+            <a class="links-hover" [class.link-active]="viewSection.selected==1" (click)="viewSection.selected=1" href="#my-skills">Meine Skills</a>
+            <a class="links-hover" [class.link-active]="viewSection.selected==2" (click)="viewSection.selected=2" href="#my-work-container">Meine Projekte</a>
+            <a class="links-hover" [class.link-active]="viewSection.selected==3" (click)="viewSection.selected=3" href="#about-container"> Über mich</a>
+
         </div>
     </div>
     <div *ngIf="menuIsOpen" class="burger">
         <div class="main">
-            <a (click)="navClose()" routerLink="/">Home</a>
-            <a (click)="navClose()" href="#about-container">About</a>
-            <a (click)="navClose()" href="#my-skills">My Skills</a>
-            <a (click)="navClose()" href="#my-work-container">My Projects</a>
+            <a (click)="navClose()" [class.link-active]="viewSection.selected==0" (click)="viewSection.selected=0" href="#home">Home</a>
+            <a (click)="navClose()" [class.link-active]="viewSection.selected==1" (click)="viewSection.selected=1" href="#my-skills">Meine Skills</a>
+            <a (click)="navClose()" [class.link-active]="viewSection.selected==2" (click)="viewSection.selected=2" href="#my-work-container">Meine Projekte</a>
+            <a (click)="navClose()" [class.link-active]="viewSection.selected==3" (click)="viewSection.selected=3" href="#about-container">Über mich</a>
+
         </div>
     </div>
     <img class="burger-menu" src="assets/img/LogoMakr.png" (click)="openCloseMenu()">

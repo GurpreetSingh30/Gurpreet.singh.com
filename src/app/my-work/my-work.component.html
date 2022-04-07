@@ -1,4 +1,4 @@
-<div id="my-work-container" class="container">
+<div #mywork id="my-work-container" class="container">
 
     <div class="stars-01"></div>
     <div class="stars-02"></div>
@@ -7,31 +7,32 @@
 
     <div class="my-work-container">
 
-        <h1>My Work</h1>
+        <h1>Meine Projekte</h1>
 
 
         <div class=" project-links ">
 
-            <a (click)="showAllProjects()"><span>All</span></a>
-            <a (click)="showAngularProjects()"><span>Angular</span></a>
-            <a (click)="showJavaScriptProjects()"><span>Java Script</span></a>
+            <a (click)="showAllProjects(); selected=1" [class.link-active]="selected==1"><span>Alle</span></a>
+            <a (click)="showAngularProjects(); selected=2" [class.link-active]="selected==2"><span>Angular</span></a>
+            <a (click)="showJavaScriptProjects(); selected=3" [class.link-active]="selected==3"><span>Java Script</span></a>
 
         </div>
 
 
-        <div data-anijs="if: click, do: rotateIn animated, to: $parent target" class="flip-container ">
+        <div data-anijs="if: click, do: rotateIn animated, to: $parent target" class="flip-container " data-aos="zoom-in">
             <div *ngIf=" showAll || showJavaScript" class="flip3D ">
                 <div class="back ">Lieferando
+                    <span>Lieferando Clone</span>
                     <a href="https://gurpreet-singh.developerakademie.com/Lieferando/index.html" target="_blank"><button>Anzeigen</button></a>
                 </div>
-                <div class="front "><img src="assets/img/lieferando.png "></div>
+                <div class="front "><img src="assets/img/liefer.png "></div>
 
             </div>
             <div *ngIf="showAll || showJavaScript" class="flip3D ">
                 <div class="back ">Pokedex
                     <a href="https://gurpreet-singh.developerakademie.com/Pokedex/index.html" target="_blank"><button>Anzeigen</button></a>
                 </div>
-                <div class="front "><img src="assets/img/Kochwelt.png "></div>
+                <div class="front "><img src="assets/img/pokedex.png "></div>
 
             </div>
 
@@ -41,11 +42,12 @@
 
 
 
-        <div class="flip-container ">
+        <div class="flip-container " data-aos="zoom-in">
             <div *ngIf="showAll || showAngular " class="flip3D ">
                 <div class="back ">Portfolio
-
+                    <span>Meine Webseite</span>
                     <a href=""><button>Anzeigen</button></a>
+
                 </div>
                 <div class="front "><img src="assets/img/portfolio.png "></div>
 

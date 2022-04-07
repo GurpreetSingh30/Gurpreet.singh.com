@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {ReactiveFormsModule} from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -17,8 +16,9 @@ import { FooterComponent } from './footer/footer.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { HomeComponent } from './home/home.component';
 import { DataprotectionComponent } from './dataprotection/dataprotection.component';
-
 import { HttpClientModule } from '@angular/common/http';
+import { AngularTypewriterEffectModule } from 'angular-typewriter-effect';
+
 
 
 @NgModule({
@@ -42,7 +42,10 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularTypewriterEffectModule,
+    
+    
   
   ],
   providers: [],

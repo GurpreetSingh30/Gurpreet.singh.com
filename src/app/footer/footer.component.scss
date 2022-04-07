@@ -3,9 +3,9 @@
     justify-content: space-between;
     padding-left: 120px;
     padding-right: 120px;
-    height: 162px;
+    height: 100px;
     align-items: center;
-    background-color: rgba(80, 78, 78, 0.39);
+    background: linear-gradient(#232323 65%, rgba(35, 35, 35, .8));
     padding-bottom: 8px;
     .footer {
         a {
@@ -13,12 +13,19 @@
             color: white;
             margin-left: 25px;
             font-size: 20px;
+            font-family: "Roboto", sans-serif;
         }
     }
     .img-container {
-        img {
+        .filter {
             filter: invert(1);
             width: 50px;
+            margin-right: 10px;
+        }
+        img {
+            width: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
         }
     }
 }
@@ -34,6 +41,8 @@
     .footer-container {
         padding-left: 30px;
         padding-right: 30px;
+        flex-direction: column;
+        padding-top: 10px;
     }
 }
 

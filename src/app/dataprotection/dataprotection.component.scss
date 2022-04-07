@@ -1,13 +1,17 @@
 .protection-frame {
-    color: white;
+    color: black;
     padding-left: 220px;
     padding-right: 220px;
     background-color: gray;
     height: 100%;
-    margin-top: 102px;
+    margin-top: 77px;
     padding-bottom: 1px;
+    font-family: 'Roboto', sans-serif;
     .protection-container {
         padding-top: 100px;
+    }
+    a {
+        color: white;
     }
 }
 

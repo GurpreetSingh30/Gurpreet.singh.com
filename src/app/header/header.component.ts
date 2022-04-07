@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewSectionService } from '../service/view-section.service';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(public viewSection : ViewSectionService ) { }
  
   ngOnInit(): void {
     
@@ -22,6 +24,7 @@ openCloseMenu() {
   }
 
 }
+
 
 navClose(){
   this.menuIsOpen = false;

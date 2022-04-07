@@ -25,64 +25,66 @@
             .about-text {
                 width: 400px;
                 font-size: 20px;
+                font-family: 'Roboto', sans-serif;
             }
             .left-container {
-                box-shadow: 0 0 16px #ffffff;
+                box-shadow: 0 0 16px #ffffff5e;
                 ;
-                border: 2px solid;
+                // border: 2px solid;
                 border-radius: 50%;
-                background-color: #ff5200;
+                // background-color: #ff5200;
                 display: flex;
             }
-            .foo {
-                transition: transform 4s ease-out;
-            }
-            .foo.sn-viewport--out {
-                transform: translateX(-300px);
-            }
-            .foo.sn-viewport--in {
-                transform: translateX(0);
-            }
-            .foo2 {
-                transition: transform 2s ease-out;
-            }
-            .foo2.sn-viewport--out {
-                transform: translateX(-300px);
-            }
-            .foo2.sn-viewport--in {
-                transform: translateX(0);
-            }
-            .foo3 {
-                transition: transform 2s ease-out;
-            }
-            .foo3.sn-viewport--out {
-                transform: translateX(300px);
-            }
-            .foo3.sn-viewport--in {
-                transform: translateX(0);
-            }
-            .foo4 {
-                transition: transform 4s ease-out;
-            }
-            .foo4.sn-viewport--out {
-                transform: translateX(300px);
-            }
-            .foo4.sn-viewport--in {
-                transform: translateX(0);
-            }
-            .opacity {
-                transition: opacity 3s ease-in;
-            }
-            .opacity.sn-viewport--out {
-                opacity: 0;
-            }
-            .opacity.sn-viewport--in {
-                opacity: 1;
-            }
+            // .foo {
+            //     transition: transform 4s ease-out;
+            // }
+            // .foo.sn-viewport--out {
+            //     transform: translateX(-300px);
+            // }
+            // .foo.sn-viewport--in {
+            //     transform: translateX(0);
+            // }
+            // .foo2 {
+            //     transition: transform 2s ease-out;
+            // }
+            // .foo2.sn-viewport--out {
+            //     transform: translateX(-300px);
+            // }
+            // .foo2.sn-viewport--in {
+            //     transform: translateX(0);
+            // }
+            // .foo3 {
+            //     transition: transform 2s ease-out;
+            // }
+            // .foo3.sn-viewport--out {
+            //     transform: translateX(300px);
+            // }
+            // .foo3.sn-viewport--in {
+            //     transform: translateX(0);
+            // }
+            // .foo4 {
+            //     transition: transform 4s ease-out;
+            // }
+            // .foo4.sn-viewport--out {
+            //     transform: translateX(300px);
+            // }
+            // .foo4.sn-viewport--in {
+            //     transform: translateX(0);
+            // }
+            // .opacity {
+            //     transition: opacity 3s ease-in;
+            // }
+            // .opacity.sn-viewport--out {
+            //     opacity: 0;
+            // }
+            // .opacity.sn-viewport--in {
+            //     opacity: 1;
+            // }
             .about-sub {
                 color: white;
                 display: flex;
                 justify-content: center;
+                margin-top: 30px;
             }
             .sub-slot {
                 text-align: center;
@@ -91,7 +93,8 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                padding: 20px;
+                // padding: 20px;
+                padding-bottom: 30px;
             }
             .icon-img {
                 width: 40px;
@@ -106,14 +109,19 @@
                 align-items: center;
                 border-radius: 200px;
                 margin-bottom: 20px;
-                box-shadow: 0 0 16px #ffffff;
+                box-shadow: 0 0 16px #ffffff5e;
                 border: 1px solid white;
             }
             .text {
                 font-size: 20px;
+                width: 305px;
+                font-family: 'Roboto', sans-serif;
             }
             h2 {
-                height: 60px;
+                height: 45px;
+                width: 73%;
+                font-size: 20px;
+                font-family: 'Roboto', sans-serif;
             }
         }
         
@@ -166,3 +174,196 @@
                 padding-right: 10px;
             }
         }
+        
+        // .container {
+        //     background-color: #1a1a1a;
+        //     padding-bottom: 80px;
+        //     padding-top: 40px;
+        //     overflow: hidden;
+        //     height: 100vh;
+        //     margin-top: 80px;
+        //     padding-left: 120px;
+        //     padding-right: 120px;
+        // }
+        // .container-explain {
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     .explain-me {
+        //         display: flex;
+        //         justify-content: center;
+        //         align-items: center;
+        //         margin-top: 80px;
+        //         width: 80%;
+        //         img {
+        //             width: 250px;
+        //             height: 250px;
+        //             border-radius: 50%;
+        //             margin-right: 80px;
+        //             margin-bottom: 80px;
+        //             object-fit: cover;
+        //         }
+        //         .img-slide {
+        //             animation: slideRight 1.5s ease-in-out;
+        //         }
+        //         .short-explain {
+        //             font-size: 18px;
+        //             color: white;
+        //             margin-left: 80px;
+        //             margin-bottom: 100px;
+        //         }
+        //         .short-slide {
+        //             animation: slideRight 2s ease-in-out;
+        //         }
+        //         h2 {
+        //             font-size: 36px;
+        //             font-family: "Roboto", sans-serif;
+        //         }
+        //     }
+        //     .explain-border {
+        //         border-bottom: 2px solid #2DFCD8;
+        //     }
+        // }
+        // .container-my-journey {
+        //     display: flex;
+        //     justify-content: space-between;
+        //     align-items: flex-start;
+        //     margin-top: 100px;
+        //     // padding-left: 10%;
+        //     // padding-right: 10%;
+        //     .my-journey {
+        //         font-size: 18px;
+        //         color: white;
+        //         width: 20%;
+        //         display: flex;
+        //         justify-content: flex-start;
+        //         align-items: center;
+        //         flex-direction: column;
+        //         text-align: center;
+        //         h4 {
+        //             font-size: 24px;
+        //         }
+        //         span {
+        //             font-family: "Roboto", sans-serif;
+        //         }
+        //         .my-journey-pic {
+        //             width: 80px;
+        //             height: 80px;
+        //             border-radius: 50%;
+        //             background-color: black;
+        //             display: flex;
+        //             justify-content: center;
+        //             align-items: center;
+        //             box-shadow: 0 0 16px #ffffff57;
+        //         }
+        //         img {
+        //             width: 40px;
+        //             height: 40px;
+        //             filter: invert(1);
+        //         }
+        //     }
+        // }
+        // @media (max-width: 1024px) {
+        //     .container-explain {
+        //         .explain-me {
+        //             img {
+        //                 width: 150px;
+        //                 height: 150px;
+        //             }
+        //             .short-explain {
+        //                 margin-left: 50px;
+        //             }
+        //         }
+        //     }
+        //     .container-my-journey {
+        //         .my-journey {
+        //             h4 {
+        //                 font-size: 20px;
+        //             }
+        //             .my-journey-pic {
+        //                 width: 60px;
+        //                 height: 60px;
+        //             }
+        //         }
+        //     }
+        // }
+        // @media (max-width: 850px) {
+        //     .container {
+        //         height: unset;
+        //     }
+        // }
+        // @media (max-width: 780px) {
+        //     .container {
+        //         .container-explain {
+        //             .explain-me {
+        //                 flex-direction: column;
+        //                 img {
+        //                     margin-right: 0px;
+        //                 }
+        //             }
+        //         }
+        //         .container-my-journey {
+        //             flex-direction: column;
+        //             align-items: center;
+        //             .my-journey {
+        //                 width: 80%;
+        //                 margin-bottom: 70px;
+        //                 // .new-challenges {
+        //                 //     margin-top: 50px;
+        //                 // }
+        //             }
+        //         }
+        //     }
+        // }
+        // @media (max-width: 420px) {
+        //     // .container-explain {
+        //     //     .explain-me {
+        //     //         img {
+        //     //             height: 120px;
+        //     //             width: 120px;
+        //     //         }
+        //     //     }
+        //     // }
+        //     .container-explain {
+        //         .explain-me {
+        //             img {
+        //                 width: 150px;
+        //                 height: 150px;
+        //             }
+        //             .short-explain {
+        //                 margin-left: 50px;
+        //                 width: 223px;
+        //             }
+        //         }
+        //     }
+        //     .container-my-journey {
+        //         margin-top: 50px;
+        //         .my-journey {
+        //             .new-challenges {
+        //                 margin-top: 0px;
+        //             }
+        //         }
+        //     }
+        // }
+        // @media (max-width: 300px) {
+        //     .container {
+        //         padding-bottom: 20px;
+        //     }
+        //     .container-my-journey {
+        //         .my-journey {
+        //             font-size: 14px;
+        //             .new-challenges {
+        //                 margin-top: 40px;
+        //             }
+        //             // .my-journey-pic {
+        //             //     width: 50px;
+        //             //     height: 50px;
+        //             // }
+        //         }
+        //     }
+        // }
+        // @media (max-height: 1366px) {
+        //     .container {
+        //         height: 100%;
+        //     }
+        // }

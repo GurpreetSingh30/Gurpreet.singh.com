@@ -1,18 +1,20 @@
-<div id="about-container" class="main-container">
-    <div class="about-me-container opacity" snInViewport>
-        <div class="left-container foo">
-            <img src="assets/img/myImg.jpeg">
+<div #aboutme id="about-container" class="main-container">
+    <div class="about-me-container opacity">
+        <div class="left-container foo" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="500">
+            <img src="assets/img/gurpreet-singh.1024x1024.jpg">
         </div>
-        <div class="right-container foo3" snInViewport>
-            <h1>About me.</h1>
-            <div class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, optio enim. Incidunt asperiores dolore hic eligendi libero labore eum consectetur dignissimos, quaerat, repellendus accusantium velit suscipit, est impedit minima facere!
+        <div class="right-container" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="125">
+            <h1> Über mich.</h1>
+            <div class="about-text">Hallo, ich heiße Gurpreet Singh. Vor einigen Jahren habe ich meine schulische Ausbildung zum Technische Assistent für Informatik erfolgreich abgeschlossen. Dort kam ich, das erste mal, in Kontakt mit dem programmieren. Nach einiger Zeit habe
+                ich einen anderen Weg eingeschlagen. Letztendlich brachte es mich zurück in den Bereich der Webentwicklung. Auf der Suche nach einem für mich passendes Training, bin ich auf die Developer Academy gestoßen.
+
             </div>
         </div>
     </div>
 
-    <div class="about-sub opacity" snInViewport>
+    <div class="about-sub opacity">
 
-        <div class="sub-slot foo" snInViewport>
+        <div class="sub-slot foo" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="125">
             <div class="icon">
                 <img class="icon-img" src="assets/img/running-man.png">
             </div>
@@ -22,12 +24,12 @@
 
 
             <div class="text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed molestias dolores minima delectus, cupiditate, nulla sit vel unde laudantium corporis officia suscipit, perspiciatis aut obcaecati deleniti hic nisi libero! Corporis.
+                als ich anfing während meiner Ausbildung Programmieren zu lernen.
             </div>
 
         </div>
 
-        <div class="sub-slot foo2" snInViewport>
+        <div class="sub-slot foo2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="125">
             <div class="icon">
                 <img class="icon-img" src="assets/img/running-man.png">
             </div>
@@ -36,10 +38,9 @@
             </h2>
 
             <div class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis placeat perferendis velit tenetur eos mollitia fugiat ab numquam? Perferendis necessitatibus magni quod aperiam aliquam cupiditate modi sequi nesciunt nemo doloribus?
-            </div>
+                im Programmieren Erfüllung zu finden. Ich habe stets ein gewisses Grundinteresse für den IT-Bereich gehegt. </div>
         </div>
-        <div class="sub-slot foo3" snInViewport>
+        <div class="sub-slot foo3" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="125">
             <div class="icon">
                 <img class="icon-img" src="assets/img/running-man.png">
             </div>
@@ -49,11 +50,10 @@
 
 
             <div class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt facere, voluptates temporibus vero nostrum dolor repellat eos cupiditate ratione necessitatibus laborum maxime saepe libero! Tempora, reprehenderit? Eveniet labore magnam iure.
-            </div>
+                half mir als professionelles Ausbildungsinstitut die Freizeit neben meines Vollzeitjobs zu nutzen um mich erfolgreich zum qualifizierten Junior Front-End Entwickler auszubilden und somit als Quereinsteiger in der IT-Branche Fuß fassen zu können. </div>
         </div>
 
-        <div class="sub-slot foo4" snInViewport>
+        <div class="sub-slot foo4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="125">
             <div class="icon">
                 <img class="icon-img" src="assets/img/running-man.png">
             </div>
@@ -63,9 +63,58 @@
 
 
             <div class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis cupiditate iusto expedita, a perspiciatis nostrum repellat quam enim tenetur nulla odit itaque maiores illo fugiat soluta voluptate dolore aliquam! Laboriosam.
+                und ich freue mich, mich in diversen Projekten einbringen zu können, Potential zu entfalten und künftig mit Mehrwert zu stiften. Ich freue mich meine neu gewonnene Leidenschaft nun zum Beruf zu machen und mich somit auch mehr darauf fokusieren zu können.
             </div>
         </div>
     </div>
 
 </div>
+
+
+<!-- 
+<div #aboutme id="about-container" class="container">
+    <div class="container-explain">
+        <div id="explainBorder" class="explain-me">
+          
+            <img src="assets/img/gurpreet-singh.1024x1024.jpg">
+            <span @myShortTrigger class="short-explain">
+                <h2>über mich.</h2>
+                Hallo, ich heiße Gurpreet Singh. Vor einigen Jahren habe ich meine schulische Ausbildung zum Technische Assistent für Informatik erfolgreich abgeschlossen. Dort kam ich, das erste mal, in Kontakt mit dem programmieren. Nach einiger Zeit habe
+                ich einen anderen Weg eingeschlagen. Letztendlich brachte es mich zurück in den Bereich der Webentwicklung. Auf der Suche nach einem für mich passendes Training, bin ich auf die Developer Academy gestoßen.
+            </span>
+        </div>
+    </div>
+    <div class="container-my-journey">
+        <div @myBeganTrigger class="my-journey">
+            <div class="my-journey-pic">
+                <img class="icon-img" src="assets/img/walk.png">
+            </div>
+            <h4>MEINE REISE BEGANN</h4>
+            <span>als ich anfing während meiner Ausbildung Programmieren zu lernen.</span>
+        </div>
+        <div @myFellTrigger class="my-journey">
+            <div class="my-journey-pic">
+                <img class="icon-img" src="assets/img/heart1.png">
+            </div>
+            <h4> FOLGLICH WURDE <br>MIR KLAR</h4>
+            <span> im Programmieren Erfüllung zu finden. Ich habe stets ein gewisses Grundinteresse für den IT-Bereich gehegt. </span>
+        </div>
+        <div @mySearchedTrigger class="my-journey">
+            <div class="my-journey-pic">
+                <img class="icon-img" src="assets/img/search-line.png">
+            </div>
+            <h4>DIE DEVELOPER AKADEMIE</h4>
+            <span>  half mir als professionelles Ausbildungsinstitut die Freizeit neben meines Vollzeitjobs zu nutzen um mich erfolgreich zum qualifizierten Junior Front-End Entwickler auszubilden und somit als Quereinsteiger in der IT-Branche Fuß fassen zu können. 
+            </span>
+        </div>
+        <div @myChallengeTrigger class="my-journey">
+            <div class="my-journey-pic new-challenges">
+                <img class="icon-img" src="assets/img/flight.png">
+            </div>
+            <h4>DIE REISE GEHT<br> WEITER</h4>
+            <span>
+                und ich freue mich, mich in diversen Projekten einbringen zu können, Potential zu entfalten und künftig mit Mehrwert zu stiften. Ich freue mich meine neu gewonnene Leidenschaft nun zum Beruf zu machen und mich somit auch mehr darauf fokusieren zu können.
+            </span>
+        </div>
+    </div>
+</div> -->

@@ -31,25 +31,29 @@
     </form> -->
 
 
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
         <div class="titel">
             <h1>Kontaktiere mich</h1>
         </div>
-        <p>Melden Sie sich mithilfe des Kontaktformulars oder direkt per E-Mail an Gurpreet.singh@gmx.de</p>
+        <p>Melden Sie sich mithilfe des Kontaktformulars oder direkt per E-Mail an: <b>Gurpreet.singh@gmx.de</b></p>
 
         <div>
-            <input type="text" placeholder="Geben sie ihren Name ein*" id="name" required [(ngModel)]="contactData.name" name="name" #name="ngModel" />
+            <input type="text" placeholder="Geben sie ihren Name ein*" id="name" required [(ngModel)]="contactData.name" minlength="5" name="name" #name="ngModel" />
+            <span *ngIf="name.touched && !name.valid">*Bitte geben Sie ihren Namen ein</span>
         </div>
         <div>
-            <input type="email" placeholder="Geben sie ihre E-Mail ein" [(ngModel)]="contactData.email" name="email" #email="ngModel" />
+            <input type="email" placeholder="Geben sie ihre E-Mail ein" [(ngModel)]="contactData.email" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" #email="ngModel" />
+            <span *ngIf="email.touched && !email.valid">*Bitte geben Sie ihre Email ein</span>
         </div>
         <div class="full">
-            <textarea type="text" rows="10" placeholder="Geben sie ihre Nachricht ein" required [(ngModel)]="contactData.message" name="message" #message="ngModel"></textarea>
+            <textarea type="text" rows="10" placeholder="Geben sie ihre Nachricht ein" minlength="10" required [(ngModel)]="contactData.message" name="message" #message="ngModel"></textarea>
+            <span *ngIf="message.touched && !message.valid">*Bitte geben Sie ihre Nachricht ein</span>
         </div>
         <div>
-            <button type="submit" [disabled]="!contactForm.form.valid">
+            <button type="submit" [disabled]="!contactForm.valid">
           Submit
         </button>
+
         </div>
     </form>
 

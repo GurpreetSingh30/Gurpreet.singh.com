@@ -3,7 +3,8 @@ header {
     left: 0;
     right: 0;
     top: 0;
-    height: 80px;
+    // height: 80px;
+    height: 55px;
     display: flex;
     justify-content: space-between;
     padding-left: 220px;
@@ -11,10 +12,13 @@ header {
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    background: #4848486b;
+    background: linear-gradient(#232323 65%, rgba(35, 35, 35, .8));
     z-index: 999;
     img {
-        height: 80px;
+        height: 55px;
+        &:hover {
+            cursor: pointer;
+        }
     }
     .links-hover {
         text-decoration: none;
@@ -22,21 +26,22 @@ header {
         color: white;
         font-size: 20px;
         font-weight: 500;
+        font-family: 'Roboto', sans-serif;
         text-decoration: none;
         position: relative;
-        &:after {
-            content: "";
-            background: white;
-            mix-blend-mode: exclusion;
-            width: calc(100% + 20px);
-            height: 0;
-            position: absolute;
-            bottom: -4px;
-            left: -10px;
-            transition: all .2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-        }
-        &:hover::after {
-            height: calc(100% + 8px)
+        // &:after {
+        //     content: "";
+        //     background: white;
+        //     mix-blend-mode: exclusion;
+        //     width: calc(100% + 20px);
+        //     height: 0;
+        //     position: absolute;
+        //     bottom: -4px;
+        //     left: -10px;
+        //     transition: all .2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        // }
+        &:hover {
+            border-bottom: 2px solid rgba(255, 30, 0, 0.705);
         }
     }
     .burger-menu {
@@ -46,6 +51,10 @@ header {
         cursor: pointer;
         margin-right: 40px;
     }
+}
+
+.link-active {
+    border-bottom: 2px solid rgba(255, 30, 0, 0.705);
 }
 
 .d-none {
@@ -101,7 +110,7 @@ header {
         padding-left: 80px;
         padding-right: 80px;
         img {
-            height: 60px;
+            height: 50px;
         }
     }
     .menu {
@@ -137,12 +146,21 @@ header {
         position: fixed;
         height: 100vh;
         width: 100%;
-        background: rgb(141, 9, 9);
+        background: linear-gradient(125deg, #100f0d 40%, #404040 70%, #000000 90%);
         left: 0;
         top: 0;
         transition: 0.3s ease;
         z-index: 999;
         display: block;
+        animation: burgerMenu .3s ease-in-out;
+        @keyframes burgerMenu {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
         .main {
             margin: 30px;
             display: flex;
@@ -162,8 +180,7 @@ header {
             color: white;
             text-decoration: none;
             &:hover {
-                color: black;
-                text-decoration: underline;
+                color: rgb(216, 52, 52);
             }
         }
     }
@@ -173,5 +190,8 @@ header {
     header {
         padding-left: 65px;
         padding-right: 0;
+        img {
+            height: 48px;
+        }
     }
 }
